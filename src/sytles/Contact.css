@@ -1,134 +1,95 @@
 /* Contact Section */
 .contact {
-    padding: 100px 20px;
-    background: linear-gradient(to bottom, #1e293b, #0f172a); /* Modern dark theme gradient */
-    color: #ffffff;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  /* Decorative Elements */
-  .contact::before,
-  .contact::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 80%);
-    opacity: 0.7;
-    pointer-events: none;
-    z-index: 0;
-  }
-  
-  .contact .container {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  /* Section Title */
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #1e293b, #0f172a); /* Modern dark theme gradient */
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container Styles */
+.contact .container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Section Title */
+.contact h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #ffba08;
+}
+
+/* Contact Info Styles */
+.contact-info {
+  margin-bottom: 40px;
+}
+
+.contact-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.contact-info p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #d1d5db;
+}
+
+.contact-info a {
+  color: #ffba08;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Map Styles */
+.map-container {
+  margin-top: 40px;
+}
+
+.map-container h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.map-container iframe {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .contact h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    margin-bottom: 15px;
-    color: #ffba08;
+    font-size: 28px;
   }
-  
-  .contact p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    margin-bottom: 30px;
-    color: #d1d5db;
+
+  .contact-info p,
+  .contact-info h3 {
+    font-size: 14px;
   }
-  
-  /* Form Styles */
-  .contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .contact h2 {
+    font-size: 24px;
   }
-  
-  .contact .form-group {
-    position: relative;
-    width: 100%;
+
+  .map-container iframe {
+    height: 250px;
   }
-  
-  .contact input,
-  .contact textarea {
-    width: 100%;
-    padding: 15px 20px;
-    border: 2px solid transparent;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    border-radius: 8px;
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
-    outline: none;
-    transition: border-color 0.3s, background-color 0.3s;
-    resize: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .contact input:focus,
-  .contact textarea:focus {
-    border-color: #ffba08;
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  /* Placeholder Styling */
-  .contact input::placeholder,
-  .contact textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-    font-style: italic;
-  }
-  
-  /* Button Styles */
-  .contact button {
-    padding: 15px 20px;
-    background: linear-gradient(to right, #ffba08, #ff9f1c);
-    color: #1e293b;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 10px rgba(255, 186, 8, 0.5);
-  }
-  
-  .contact button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 186, 8, 0.6);
-  }
-  
-  .contact button:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 15px rgba(255, 186, 8, 0.5);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .contact h2 {
-      font-size: 28px;
-    }
-  
-    .contact p {
-      font-size: 14px;
-    }
-  
-    .contact input,
-    .contact textarea {
-      font-size: 14px;
-    }
-  
-    .contact button {
-      font-size: 16px;
-    }
-  }
-  
+}

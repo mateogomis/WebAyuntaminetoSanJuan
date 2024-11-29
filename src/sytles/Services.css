@@ -1,152 +1,180 @@
 /* Services Section */
 .services {
-    padding: 100px 20px;
-    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* Modern blue gradient */
-    text-align: center;
-    color: #ffffff;
-    position: relative;
-    overflow: hidden;
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* Modern blue gradient */
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Elements */
+.services::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  z-index: 0;
+  transform: scale(1);
+  animation: rotateGradient 20s linear infinite;
+}
+
+@keyframes rotateGradient {
+  0% {
+    transform: scale(1) rotate(0deg);
   }
-  
-  /* Decorative Elements */
-  .services::before {
-    content: '';
-    position: absolute;
-    top: -20%;
-    left: -20%;
-    width: 150%;
-    height: 150%;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-    z-index: 0;
-    transform: scale(1);
-    animation: rotateGradient 20s linear infinite;
+  100% {
+    transform: scale(1) rotate(360deg);
   }
-  
-  @keyframes rotateGradient {
-    0% {
-      transform: scale(1) rotate(0deg);
-    }
-    100% {
-      transform: scale(1) rotate(360deg);
-    }
-  }
-  
-  .services .container {
-    position: relative;
-    z-index: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Section Title */
-  .services h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    margin-bottom: 15px;
-    color: #ffba08;
-    text-transform: uppercase;
-  }
-  
-  .services-description {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    margin-bottom: 50px;
-    color: #d1d5db;
-  }
-  
-  /* Service List */
-  .service-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-  }
-  
-  /* Individual Service Item */
+}
+
+.services .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.services h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #ffba08;
+  text-transform: uppercase;
+}
+
+.services-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  margin-bottom: 50px;
+  color: #d1d5db;
+}
+
+/* Service List */
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Individual Service Item */
+.service-item {
+  background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  padding: 30px 25px;
+  border-radius: 15px;
+  max-width: 300px;
+  flex: 1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.service-item:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #ffba08, #ffa502);
+}
+
+/* Icon Container */
+.icon-container {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #ffba08;
+  transition: color 0.3s ease;
+}
+
+.service-item:hover .icon-container {
+  color: #ffffff;
+}
+
+.service-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333333;
+  transition: color 0.3s ease;
+}
+
+.service-item:hover h3 {
+  color: #ffffff;
+}
+
+.service-item p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.8;
+  transition: color 0.3s ease;
+}
+
+.service-item:hover p {
+  color: #ffffff;
+}
+/* Botón de Marketplace */
+.button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.marketplace-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(to right, #ffba08, #ffa502);
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.marketplace-button:hover {
+  background: linear-gradient(to right, #ffa502, #ffba08);
+  transform: scale(1.1); /* Efecto de aumento */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.marketplace-button svg {
+  margin-right: 8px; /* Espacio entre el ícono y el texto */
+  vertical-align: middle; /* Alinea el ícono con el texto */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .service-item {
-    background: linear-gradient(to bottom, #ffffff, #e6e6e6);
-    padding: 30px 25px;
-    border-radius: 15px;
-    max-width: 300px;
-    flex: 1;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
-    cursor: pointer;
-    text-align: center;
+    max-width: 90%;
   }
-  
-  .service-item:hover {
-    transform: translateY(-15px) scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(to bottom, #ffba08, #ffa502);
+
+  .services h2 {
+    font-size: 36px;
   }
-  
-  /* Icon Container */
-  .icon-container {
-    font-size: 50px;
-    margin-bottom: 20px;
-    color: #ffba08;
-    transition: color 0.3s ease;
+
+  .services-description {
+    font-size: 16px;
   }
-  
-  .service-item:hover .icon-container {
-    color: #ffffff;
+}
+
+@media (max-width: 480px) {
+  .service-list {
+    gap: 20px;
   }
-  
-  .service-item h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    margin-bottom: 15px;
-    color: #333333;
-    transition: color 0.3s ease;
+
+  .service-item {
+    max-width: 100%;
   }
-  
-  .service-item:hover h3 {
-    color: #ffffff;
+
+  .services h2 {
+    font-size: 28px;
   }
-  
-  .service-item p {
-    font-family: 'Montserrat', sans-serif;
+
+  .services-description {
     font-size: 14px;
-    color: #666666;
-    line-height: 1.8;
-    transition: color 0.3s ease;
   }
-  
-  .service-item:hover p {
-    color: #ffffff;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .service-item {
-      max-width: 90%;
-    }
-  
-    .services h2 {
-      font-size: 36px;
-    }
-  
-    .services-description {
-      font-size: 16px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .service-list {
-      gap: 20px;
-    }
-  
-    .service-item {
-      max-width: 100%;
-    }
-  
-    .services h2 {
-      font-size: 28px;
-    }
-  
-    .services-description {
-      font-size: 14px;
-    }
-  }
-  
+}

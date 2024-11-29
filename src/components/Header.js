@@ -27,15 +27,16 @@ function Header() {
         <a href="#" className="logo">Logo</a>
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">Historia</a></li>
+          <li><a href="#services">Puestos</a></li>
+          <li><a href="#sustainability">Sostenibilidad</a></li> {/* Corregido aquí */}
+          <li><a href="#contact">Contacto</a></li>
         </ul>
-        <a href="#booking" className="cta-button">Book Your Visit</a>
+        <a href="#booking" className="cta-button">Posible boton delivery</a>
       </nav>
       <div className="hero">
-        <h1 className="hero-title">Mercado Sant Joan</h1>
-        <p className="hero-subtitle">Discover Elegance, Tradition, and Flavors</p>
+        <h1 className="hero-title"></h1>
+        {/* <p className="hero-subtitle">Mercat Sant Joan</p> */}
       </div>
     </header>
   );

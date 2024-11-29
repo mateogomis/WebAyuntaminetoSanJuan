@@ -33,16 +33,16 @@
 /* Animación para cambiar el fondo */
 @keyframes changeBackground {
   0%, 25% {
-    background-image: url('../assets/imagenes/mercadoAntiguo/mercadoA1.jpg');
+    background-image: url('../assets/imagenes/mercadoNuevo/mercadoN1.jpg');
   }
   33%, 58% {
-    background-image: url('../assets/imagenes/mercadoAntiguo/mercadoA2.jpg');
+    background-image: url('../assets/imagenes/mercadoNuevo/mercadoN2.jpg');
   }
   66%, 91% {
-    background-image: url('../assets/imagenes/mercadoAntiguo/mercadoA3.jpg');
+    background-image: url('../assets/imagenes/mercadoNuevo/mercadoN3.jpg');
   }
   100% {
-    background-image: url('../assets/imagenes/mercadoAntiguo/mercadoA1.jpg');
+    background-image: url('../assets/imagenes/mercadoNuevo/mercadoN4.jpg');
   }
 }
 

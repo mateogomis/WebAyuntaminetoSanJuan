@@ -1,0 +1,97 @@
+/* Pie de Página */
+.pie-pagina {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .pie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Navegación */
+  .pie-nav,
+  .pie-social,
+  .pie-legal,
+  .pie-logos {
+    flex: 1 1 200px;
+  }
+  
+  .pie-nav h3,
+  .pie-social h3,
+  .pie-legal h3,
+  .pie-logos h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ffba08;
+  }
+  
+  .pie-nav ul,
+  .pie-social ul,
+  .pie-legal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .pie-nav li,
+  .pie-social li,
+  .pie-legal li {
+    margin-bottom: 10px;
+  }
+  
+  .pie-nav a,
+  .pie-social a,
+  .pie-legal a {
+    text-decoration: none;
+    color: #d1d5db;
+    transition: color 0.3s ease;
+  }
+  
+  .pie-nav a:hover,
+  .pie-social a:hover,
+  .pie-legal a:hover {
+    color: #ffba08;
+  }
+  
+  /* Logos */
+  .pie-logos .logo {
+    max-width: 100px;
+    margin: 10px;
+    display: inline-block;
+  }
+  
+  /* Bottom Section */
+  .pie-bottom {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #d1d5db;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .pie-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .pie-nav,
+    .pie-social,
+    .pie-legal,
+    .pie-logos {
+      flex: none;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  

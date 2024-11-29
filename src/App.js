@@ -5,6 +5,7 @@ import Home from './components/Home'; // Página principal que incluye Header, A
 import MercadoAntiguo from './components/MercadoAntiguo';
 import MercadoNuevo from './components/MercadoNuevo';
 import MercadoProvisional from './components/MercadoProvisional';
+
 import './App.css';
 
 function App() {

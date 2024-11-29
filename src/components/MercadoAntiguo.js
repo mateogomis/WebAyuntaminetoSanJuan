@@ -95,13 +95,13 @@ function MercadoSantJoan() {
             <li><a href="/">Home</a></li>
             <li><a href="/mercado-nuevo">Mercado Nuevo</a></li>
             <li><a href="/mercado-provisional">Mercado Provisional</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
           <a href="#booking" className="cta-button">Book Your Visit</a>
         </nav>
         <div className="hero">
-          <h1 className="hero-title">Mercado Sant Joan</h1>
-          <p className="hero-subtitle">Discover Elegance, Tradition, and Flavors</p>
+          {/* <h1 className="hero-title">Mercado Sant Joan</h1>
+          <p className="hero-subtitle">Discover Elegance, Tradition, and Flavors</p> */}
         </div>
       </header>
 
