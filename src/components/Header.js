@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import '../sytles/Header.css';
+import LogoPrincipal from '../assets/imagenes/Logos/LogoPrincipal.png'; // Ruta del logo
 
 function Header() {
   const images = [
     '../assets/imagenes/mercadoAntiguo/mercadoA1.jpg',
     '../assets/imagenes/mercadoAntiguo/mercadoA2.jpg',
-    '../assets/imagenes/mercadoAntiguo/mercadoA3.jpg'
+    '../assets/imagenes/mercadoAntiguo/mercadoA3.jpg',
   ];
-  
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -19,20 +20,23 @@ function Header() {
   }, []);
 
   return (
-    <header 
-      className="header" 
+    <header
+      className="header"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
       <nav className="navbar">
-        <a href="#" className="logo">Logo</a>
+        <div className="navbar-background"></div> {/* Fondo translúcido detrás del navbar */}
+        <a href="#" className="logo">
+          <img src={LogoPrincipal} alt="Logo Principal" className="logo-image" />
+        </a>
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">Historia</a></li>
           <li><a href="#services">Puestos</a></li>
-          <li><a href="#sustainability">Sostenibilidad</a></li> {/* Corregido aquí */}
+          <li><a href="#sustainability">Sostenibilidad</a></li>
           <li><a href="#contact">Contacto</a></li>
         </ul>
-        <a href="#booking" className="cta-button">Posible boton delivery</a>
+        <a href="#booking" className="cta-button">Posible botón delivery</a>
       </nav>
       <div className="hero">
         <h1 className="hero-title"></h1>

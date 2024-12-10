@@ -1,5 +1,7 @@
 import React from 'react';
 import '../sytles/PiePagina.css'; // Crea este archivo para los estilos
+import LogoPrincipal from '../assets/imagenes/Logos/LogoPrincipal.png';
+import LogoNegativo from '../assets/imagenes/Logos/LogoNegativo.png';
 
 function PiePagina() {
   return (
@@ -38,8 +40,8 @@ function PiePagina() {
         {/* Logos */}
         <div className="pie-logos">
           <h3>Logos</h3>
-          <img src="/path-to-your-logo/logo1.png" alt="Logo 1" className="logo" />
-          <img src="/path-to-your-logo/logo2.png" alt="Logo 2" className="logo" />
+          <img src={LogoPrincipal} alt="Logo 1" className="logo" />
+          <img src={LogoNegativo} alt="Logo 2" className="logo" />
         </div>
       </div>
       <div className="pie-bottom">

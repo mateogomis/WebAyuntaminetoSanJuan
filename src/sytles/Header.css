@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   animation: changeBackground 18s infinite ease-in-out; /* Duración total 18 segundos */
   transition: background-image 1.5s ease-in-out; /* Transición suave entre imágenes */
-  color: #fff;
+  color: #ffffff;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,6 @@
   padding: 0 20px;
   box-sizing: border-box;
   overflow-x: hidden;
-  position: relative;
   isolation: isolate;
 }
 
@@ -26,8 +25,19 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo para mejor contraste */
+  background: rgba(0, 0, 0, 0.4); /* Oscurece el fondo para mejor contraste */
   z-index: -1;
+}
+
+.logo img {
+  max-height: 80px; /* Ajusta la altura máxima del logo */
+  width: auto; /* Mantiene la proporción del logo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Sombra más fuerte en hover */
 }
 
 /* Animación para cambiar el fondo */
@@ -46,31 +56,30 @@
   }
 }
 
-/* Resto de estilos CSS */
+/* Navbar */
 .navbar {
   position: absolute;
-  top: 20px;
+  top: 0;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 10px 30px;
   z-index: 10;
   box-sizing: border-box;
+  background: rgba(207, 207, 207, 0.103); /* Fondo translúcido uniforme */
+  border-radius: 10px; /* Bordes redondeados para navbar */
+  backdrop-filter: blur(10px); /* Desenfoque para mayor legibilidad */
 }
 
-.navbar .logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 30px;
-  font-weight: 700;
-  color: #fff;
-  transition: color 0.3s ease-in-out;
-  text-transform: uppercase;
-}
-
-.navbar .logo:hover {
-  color: #ffba08; /* Amarillo brillante */
+.navbar-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .navbar .nav-links {
@@ -82,16 +91,17 @@
 .navbar .nav-links a {
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
-  color: #fff;
+  color: #ffffff; /* Cambia los enlaces a blanco */
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
   position: relative;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la legibilidad */
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar .nav-links a:hover {
-  color: #ffba08;
+  color: #2218a3;
 }
 
 .navbar .nav-links a::after {
@@ -101,7 +111,7 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background: #ffba08;
+  background: #2218a3;
   transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -113,21 +123,21 @@
 .cta-button {
   font-family: 'Montserrat', sans-serif;
   padding: 12px 25px;
-  background: #ffba08;
+  background: #2218a3;
   border: none;
-  color: #000;
+  color: #ffffff;
   font-weight: 700;
   border-radius: 25px;
   text-transform: uppercase;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 186, 8, 0.4);
+  box-shadow: 0 4px 15px rgba(252, 252, 252, 0.4);
 }
 
 .cta-button:hover {
-  background: #ff9f1c;
+  background: #0066ffad;
   transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(255, 159, 28, 0.5);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
 }
 
 .hero {
@@ -171,11 +181,23 @@
   }
 }
 
-/* Estilos responsive (ya incluídos antes) */
+/* Estilos responsive */
 @media (max-width: 768px) {
-  /* ... */
+  .hero-title {
+    font-size: 50px;
+  }
+  .cta-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }
 
 @media (max-width: 480px) {
-  /* ... */
+  .hero-title {
+    font-size: 40px;
+  }
+  .cta-button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
 }
