@@ -1,5 +1,13 @@
 import React from 'react';
-import '../sytles/Services.css';
+import '../styles/Services.css';
+
+// Importar imágenes
+import IconoCarniceria from '../assets/imagenes/Logos/Icono_Carniceria.svg';
+import IconoPanaderia from '../assets/imagenes/Logos/Icono_Panaderia.svg';
+import IconoFruteria from '../assets/imagenes/Logos/Icono_Fruteria.svg';
+import IconoHerboristeria from '../assets/imagenes/Logos/Icono_Herboristeria.svg';
+import IconoPescado from '../assets/imagenes/Logos/Icono_Pescado.svg';
+import IconoMercado from '../assets/imagenes/Logos/Icono_Logo_MercatSantJoan_1@300x.png';
 
 function Services() {
   return (
@@ -15,17 +23,18 @@ function Services() {
         <div className="service-list">
           {/* Elementos individuales */}
           {[
-            { icon: 'fa-lightbulb', title: 'Carnicería', details: 'Matías Garrido, José J. Oriente, Jaime Iborra “Calsa”.' },
-            { icon: 'fa-code', title: 'Panadería', details: 'Loli.' },
-            { icon: 'fa-chart-pie', title: 'Frutería', details: 'Corbi.' },
-            { icon: 'fa-leaf', title: 'Herboristería', details: 'El Herbolario de Mario.' },
-            { icon: 'fa-fish', title: 'Pescadería', details: 'Giner, Pescados Baeza.' },
-            { icon: 'fa-store', title: 'Ultramarinos', details: 'Mariló.' },
-            { icon: 'fa-coffee', title: 'Cafetería', details: 'Cantina Mercado.' }
+            { image: IconoCarniceria, title: 'Carnicería', details: 'Matías Garrido, José J. Oriente, Jaime Iborra “Calsa”.' },
+            { image: IconoPanaderia, title: 'Panadería', details: 'Loli.' },
+            { image: IconoFruteria, title: 'Frutería', details: 'Corbi.' },
+            { image: IconoHerboristeria, title: 'Herboristería', details: 'El Herbolario de Mario.' },
+            { image: IconoPescado, title: 'Pescadería', details: 'Giner, Pescados Baeza.' },
+            { image: IconoMercado, title: 'Ultramarinos', details: 'Mariló.' },
+            { image: IconoMercado, title: 'Cafetería', details: 'Cantina Mercado.' }
           ].map((service, index) => (
             <div className="service-item" key={index}>
-              <div className="icon-container">
-                <i className={`fas ${service.icon}`}></i>
+              {/* Imagen encima del texto */}
+              <div className="image-container">
+                <img src={service.image} alt={service.title} />
               </div>
               <h3>{service.title}</h3>
               <p>{service.details}</p>

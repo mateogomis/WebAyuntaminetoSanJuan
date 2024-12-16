@@ -1,5 +1,5 @@
 import React from 'react';
-import '../sytles/PiePagina.css'; // Crea este archivo para los estilos
+import '../styles/PiePagina.css'; // Crea este archivo para los estilos
 import LogoPrincipal from '../assets/imagenes/Logos/LogoPrincipal.png';
 import LogoNegativo from '../assets/imagenes/Logos/LogoNegativo.png';
 

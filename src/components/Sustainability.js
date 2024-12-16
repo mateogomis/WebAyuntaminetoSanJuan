@@ -1,5 +1,5 @@
 import React from 'react';
-import '../sytles/Sustainability.css'; // Asegúrate de crear este archivo para los estilos
+import '../styles/Sustainability.css'; // Asegúrate de crear este archivo para los estilos
 import sustainabilityImage from '../assets/imagenes/Sostenibilidad.jpg'; // Ruta de la imagen
 
 function Sustainability() {

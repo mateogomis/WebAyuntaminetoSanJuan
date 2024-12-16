@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../sytles/About.css'; // Asegúrate de corregir el nombre del archivo si era un error tipográfico
+import '../styles/About.css'; // Asegúrate de corregir el nombre del archivo si era un error tipográfico
 import mercadoA2 from '../assets/imagenes/mercadoAntiguo/mercadoA2.jpg';
 
 function About() {

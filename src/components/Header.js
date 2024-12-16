@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../sytles/Header.css';
+import '../styles/Header.css';
 import LogoPrincipal from '../assets/imagenes/Logos/LogoPrincipal.png'; // Ruta del logo
 
 function Header() {

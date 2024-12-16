@@ -2,8 +2,8 @@ import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../sytles/MercadoAntiguo.css';
-import '../sytles/Header.css';
+import '../styles/MercadoAntiguo.css';
+import '../styles/Header.css';
 import LogoPrincipal from '../assets/imagenes/Logos/LogoPrincipal.png'; // Ruta del logo
 
 // Imágenes - No se utilizan actualmente
