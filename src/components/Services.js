@@ -1,56 +1,77 @@
 import React from 'react';
-import '../sytles/Services.css';
+import Slider from 'react-slick'; // Importar Slider de react-slick
+import '../styles/Services.css';
+
+// Importar imágenes
+import IconoCarniceria from '../assets/imagenes/Logos/Icono_Carniceria.svg';
+import IconoPanaderia from '../assets/imagenes/Logos/Icono_Panaderia.svg';
+import IconoFruteria from '../assets/imagenes/Logos/Icono_Fruteria.svg';
+import IconoHerboristeria from '../assets/imagenes/Logos/Icono_Herboristeria.svg';
+import IconoPescado from '../assets/imagenes/Logos/Icono_Pescado.svg';
+import IconoMercado from '../assets/imagenes/Logos/Icono_Logo_MercatSantJoan_1@300x.png';
 
 function Services() {
+  // Configuración para react-slick
+  const settings = {
+    dots: false, // No mostrar puntos de navegación
+    infinite: true, // Infinito desplazamiento circular
+    speed: 500, // Velocidad de cambio
+    slidesToShow: 3, // Cuántos elementos mostrar a la vez
+    slidesToScroll: 1, // Cuántos elementos desplazar a la vez
+    nextArrow: <SampleNextArrow />, // Componente personalizado para la flecha siguiente
+    prevArrow: <SamplePrevArrow />, // Componente personalizado para la flecha previa
+  };
+
   return (
     <section id="services" className="services">
       <div className="container">
-        {/* Título de la sección */}
-        <h2>Puestos</h2>
+        <h2>Nuestros Puestos</h2>
         <p className="services-description">
           Descubre nuestros excepcionales puestos dedicados a ofrecerte los mejores productos y atención.
         </p>
-
-        {/* Lista de servicios */}
-        <div className="service-list">
-          {/* Elementos individuales */}
-          {[
-            { icon: 'fa-lightbulb', title: 'Carnicería', details: 'Matías Garrido, José J. Oriente, Jaime Iborra “Calsa”.' },
-            { icon: 'fa-code', title: 'Panadería', details: 'Loli.' },
-            { icon: 'fa-chart-pie', title: 'Frutería', details: 'Corbi.' },
-            { icon: 'fa-leaf', title: 'Herboristería', details: 'El Herbolario de Mario.' },
-            { icon: 'fa-fish', title: 'Pescadería', details: 'Giner, Pescados Baeza.' },
-            { icon: 'fa-store', title: 'Ultramarinos', details: 'Mariló.' },
-            { icon: 'fa-coffee', title: 'Cafetería', details: 'Cantina Mercado.' }
+        <Slider {...settings}>
+          {[ /* Lista de servicios como antes */
+            { image: IconoCarniceria, title: 'Carnicería' },
+            { image: IconoPanaderia, title: 'Panadería' },
+            { image: IconoFruteria, title: 'Frutería' },
+            { image: IconoHerboristeria, title: 'Herboristería' },
+            { image: IconoPescado, title: 'Pescadería' },
+            { image: IconoMercado, title: 'Ultramarinos' },
+            { image: IconoMercado, title: 'Cafetería' }
           ].map((service, index) => (
             <div className="service-item" key={index}>
-              <div className="icon-container">
-                <i className={`fas ${service.icon}`}></i>
+              <div className="image-container">
+                <img src={service.image} alt={service.title} />
               </div>
               <h3>{service.title}</h3>
-              <p>{service.details}</p>
             </div>
           ))}
-        </div>
-
-        {/* Botón para ir al marketplace */}
-        <div className="button-container">
-          <a href="/marketplace" className="marketplace-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="bi bi-cart4"
-              viewBox="0 0 16 16"
-            >
-              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
-            </svg>
-            COMPRA AQUÍ
-          </a>
-        </div>
+        </Slider>
       </div>
     </section>
+  );
+}
+
+// Componentes para las flechas personalizadas
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block",  }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block",  }}
+      onClick={onClick}
+    />
   );
 }
 

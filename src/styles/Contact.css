@@ -1,7 +1,7 @@
 /* Contact Section */
 .contact {
   padding: 100px 20px;
-  background: linear-gradient(to bottom, #1e293b, #0f172a); /* Modern dark theme gradient */
+  background: linear-gradient(to bottom, #526e98, #a7bbd9); /* Modern dark theme gradient */
   color: #ffffff;
   text-align: center;
   position: relative;
@@ -22,7 +22,7 @@
   font-family: 'Playfair Display', serif;
   font-size: 36px;
   margin-bottom: 30px;
-  color: #ffba08;
+  color: #154999;
 }
 
 /* Contact Info Styles */
@@ -46,7 +46,7 @@
 }
 
 .contact-info a {
-  color: #ffba08;
+  color: #154999;
   text-decoration: none;
 }
 

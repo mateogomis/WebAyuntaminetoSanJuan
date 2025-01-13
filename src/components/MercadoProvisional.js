@@ -2,9 +2,10 @@ import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../sytles/MercadoAntiguo.css';
-import '../sytles/Header.css';
+import '../styles/MercadoAntiguo.css';
+import '../styles/Header.css';
 import LogoPrincipal from '../assets/imagenes/Logos/LogoPrincipal.png'; // Ruta del logo
+import PiePagina from '../components/PiePagina';
 
 import video1 from '../assets/videos/mercadoProvisional/1.mov';
 import video2 from '../assets/videos/mercadoProvisional/2.mov';
@@ -16,6 +17,8 @@ import video7 from '../assets/videos/mercadoProvisional/7.mov';
 import video8 from '../assets/videos/mercadoProvisional/8.mov';
 import video9 from '../assets/videos/mercadoProvisional/9.mov';
 import video10 from '../assets/videos/mercadoProvisional/10.mov';
+import video11 from '../assets/videos/mercadoProvisional/11.mp4';
+import video12 from '../assets/videos/mercadoProvisional/12.mp4';
 
 function MercadoSantJoan() {
   // Carrusel de imágenes - desactivado temporalmente
@@ -43,6 +46,8 @@ function MercadoSantJoan() {
     video8,
     video9,
     video10,
+    video11,
+    video12,
   ];
 
   const carouselSettings = {
@@ -160,8 +165,11 @@ function MercadoSantJoan() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+        
+
       </div>
     </section>
+    <PiePagina /> 
 
 
 

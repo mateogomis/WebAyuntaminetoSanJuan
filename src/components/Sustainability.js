@@ -1,21 +1,14 @@
 import React from 'react';
-import '../sytles/Sustainability.css'; // Asegúrate de crear este archivo para los estilos
+import '../styles/Sustainability.css'; // Asegúrate de crear este archivo para los estilos
 import sustainabilityImage from '../assets/imagenes/Sostenibilidad.jpg'; // Ruta de la imagen
 
 function Sustainability() {
   return (
     <section id="sustainability" className="sustainability">
       <div className="container">
-        <h2>Sostenibilidad</h2>
         <div className="sustainability-content">
-          <div className="image-container">
-            <img
-              src={sustainabilityImage}
-              alt="Sostenibilidad"
-              className="sustainability-image"
-            />
-          </div>
           <div className="text-container">
+            <h2>Sostenibilidad</h2>
             <p>
               Comprar en nuestro mercado es elegir un modelo de compra consciente.
             </p>
@@ -30,5 +23,7 @@ function Sustainability() {
     </section>
   );
 }
+
+
 
 export default Sustainability;

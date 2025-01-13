@@ -1,0 +1,53 @@
+
+.text-container {
+  display: flex;        /* Establece el contenedor como un contenedor flex */
+  flex-direction: column; /* Apila los hijos verticalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  align-items: center;
+  flex: 1;
+  max-width: 900px;
+  font-family: 'Montserrat';
+  text-align: left;
+  background: linear-gradient(rgba(164, 164, 164, 0.705), rgba(164, 164, 164, 0.705)), url('../assets/imagenes/Sostenibilidad.jpg');
+  background-size: cover;        /* Cubre completamente el fondo */
+  background-position: center;   /* Centra la imagen en el fondo */
+  border-radius: 15px;           /* Bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);  /* Sombra para dar profundidad */
+  padding: 30px;                 /* Espacio interior para el texto */
+  color: #ffffff;                /* Color del texto para contraste */
+  position: relative;            /* Para posicionamiento potencial de elementos internos */
+  margin-bottom: 80px;
+  margin-top: 80px;
+  margin-left: 140px;
+}
+
+.text-container h2{
+  font-size: 30px;
+}
+
+.text-container p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 15px;           /* Margen entre párrafos */
+}
+
+.text-container strong {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .text-container {
+    max-width: 90%;  /* Más ancho en pantallas pequeñas para mejor lectura */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-container h2 {
+    font-size: 28px;  /* Tamaño más pequeño para el título en dispositivos muy pequeños */
+  }
+
+  .text-container p {
+    font-size: 16px;  /* Tamaño de fuente reducido para el texto */
+  }
+}
+

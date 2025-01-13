@@ -1,6 +1,6 @@
 /* Pie de Página */
 .pie-pagina {
-    background: #0f172a;
+  background: linear-gradient(to bottom,#a7bbd9 ,#526e98 ); /* Modern dark theme gradient */
     color: #ffffff;
     padding: 40px 20px;
     text-align: center;
@@ -32,7 +32,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 18px;
     margin-bottom: 15px;
-    color: #ffba08;
+    color: #526e98;
   }
   
   .pie-nav ul,
@@ -60,7 +60,7 @@
   .pie-nav a:hover,
   .pie-social a:hover,
   .pie-legal a:hover {
-    color: #ffba08;
+    color: #526e98;
   }
   
   /* Logos */
@@ -94,4 +94,34 @@
       margin-bottom: 20px;
     }
   }
-  
+  .pie-logos .logo.tamano-grande {
+    max-width: 250px; /* Ajusta este valor según sea necesario */
+    margin: 10px;
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 70px; /* Altura ajustada */
+  right: 20px; /* Separación del lado derecho */
+  background: none; /* Eliminar fondo */
+  color:#477ed1 ; /* Color del icono */
+  border: none; /* Eliminar borde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.scroll-to-top svg {
+  width: 70px; /* Ajusta el ancho del SVG */
+  height: 70px; /* Ajusta la altura del SVG */
+}
+
+.scroll-to-top:hover {
+  color: #0725e6b0; /* Color al pasar el ratón */
+  transform: scale(1.2); /* Zoom suave */
+}
+
+.scroll-to-top:active {
+  transform: scale(1.1); /* Sutil compresión al hacer clic */
+}

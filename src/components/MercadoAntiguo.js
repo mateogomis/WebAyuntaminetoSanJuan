@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../sytles/MercadoAntiguo.css';
-import '../sytles/Header.css';
+import '../styles/MercadoAntiguo.css';
+import '../styles/Header.css';
 import LogoPrincipal from '../assets/imagenes/Logos/LogoPrincipal.png'; // Ruta del logo
+import PiePagina from '../components/PiePagina';
 
 // Imágenes
 import mercadoA1 from '../assets/imagenes/mercadoAntiguo/mercadoA1.jpg';
@@ -206,6 +207,7 @@ function MercadoSantJoan() {
         </div>
       </div>
     </section>
+    <PiePagina /> 
     </>
   );
 }
