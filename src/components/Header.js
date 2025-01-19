@@ -26,17 +26,17 @@ function Header() {
     >
       <nav className="navbar">
         <div className="navbar-background"></div> {/* Fondo translúcido detrás del navbar */}
-        <a href="#" className="logo">
-          <img src={LogoPrincipal} alt="Logo Principal" className="logo-image" />
+        <a href="#home" className="logo">
+          <img src={LogoPrincipal} alt="Logo Principal" className="logo-image"  href="#home" />
         </a>
         <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
+          {/* <li><a href="#home">Home</a></li> */}
           <li><a href="#about">Historia</a></li>
           <li><a href="#services">Puestos</a></li>
           <li><a href="#sustainability">Sostenibilidad</a></li>
           <li><a href="#contact">Contacto</a></li>
         </ul>
-        <a href="#booking" className="cta-button">Posible botón delivery</a>
+        {/* <a href="#booking" className="cta-button">Posible botón delivery</a> */}
       </nav>
       <div className="hero">
         <h1 className="hero-title"></h1>

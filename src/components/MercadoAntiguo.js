@@ -107,16 +107,16 @@ function MercadoSantJoan() {
       >
         <nav className="navbar">
           <div className="navbar-background"></div> {/* Fondo translúcido detrás del navbar */}
-          <a href="#" className="logo">
+          <a href="/" className="logo">
             <img src={LogoPrincipal} alt="Logo Principal" className="logo-image" />
           </a>
           <ul className="nav-links">
-            <li><a href="/">Home</a></li>
+            {/* <li><a href="/">Home</a></li> */}
             <li><a href="/mercado-nuevo">Mercado nuevo</a></li>
             <li><a href="/mercado-provisional">Mercado provisional</a></li>
             <li><a href="#contact">Contacto</a></li>
           </ul>
-          <a href="#booking" className="cta-button">Posible botón delivery</a>
+          {/* <a href="#booking" className="cta-button">Posible botón delivery</a> */}
         </nav>
         <div className="hero">
           <h1 className="hero-title"></h1>
