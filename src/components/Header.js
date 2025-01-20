@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';  // Importamos useLocation para obtener la ruta actual
+import { useLocation } from 'react-router-dom';
 import '../styles/Header.css';
 import LogoPrincipal from '../assets/imagenes/Logos/LogoPrincipal.png'; 
 import logoAyuC from '../assets/imagenes/Logos/logoAyuC.png';
@@ -13,24 +13,31 @@ const images = [
 
 function Header() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const location = useLocation();  // Usamos useLocation para obtener la ruta actual
+  const location = useLocation(); // Usamos useLocation para obtener la ruta actual
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
+    }, 5000); // Cambia la imagen cada 5 segundos
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); // Limpiar el intervalo al desmontar
   }, []);
 
   // Verificar si estamos en una de las rutas específicas para mostrar el menú
   const showMenu = location.pathname === '/mercado-nuevo' || location.pathname === '/mercado-antiguo' || location.pathname === '/mercado-provisional';
 
   return (
-    <header
-      className="header"
-      style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
-    >
+    <header className="header">
+      <div className="background-images">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`background-image ${index === currentImageIndex ? 'active' : ''}`}
+            style={{ backgroundImage: `url(${image})` }}
+          ></div>
+        ))}
+      </div>
+      
       <nav className="navbar">
         <div className="navbar-background"></div>
         <div className="logo-container">
