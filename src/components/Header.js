@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Header.css';
 import LogoPrincipal from '../assets/imagenes/Logos/LogoPrincipal.png'; // Ruta del logo
+import logoAyuC from '../assets/imagenes/Logos/logoAyuC.png';
 
 function Header() {
   const images = [
@@ -28,6 +29,9 @@ function Header() {
         <div className="navbar-background"></div> {/* Fondo translúcido detrás del navbar */}
         <a href="#home" className="logo">
           <img src={LogoPrincipal} alt="Logo Principal" className="logo-image"  href="#home" />
+        </a>
+        <a href="" className="logo">
+          <img src={logoAyuC} alt="logoAyuC" className="logo-image"  href="" />
         </a>
         <ul className="nav-links">
           {/* <li><a href="#home">Home</a></li> */}
