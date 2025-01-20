@@ -3,13 +3,13 @@ import '../styles/Header.css';
 import LogoPrincipal from '../assets/imagenes/Logos/LogoPrincipal.png'; 
 import logoAyuC from '../assets/imagenes/Logos/logoAyuC.png';
 
-// Importación de imágenes correctamente
-import mercadoN1 from '../assets/imagenes/mercadoNuevo/mercadoN1.jpg';
-import mercadoN2 from '../assets/imagenes/mercadoNuevo/mercadoN2.jpg';
-import mercadoN3 from '../assets/imagenes/mercadoNuevo/mercadoN3.jpg';
-import mercadoN4 from '../assets/imagenes/mercadoNuevo/mercadoN4.jpg';
-
-const images = [mercadoN1, mercadoN2, mercadoN3, mercadoN4];
+// Rutas correctas para imágenes dentro de la carpeta public
+const images = [
+  '/mercadoNuevo/mercadoN1.jpg',
+  '/mercadoNuevo/mercadoN2.jpg',
+  '/mercadoNuevo/mercadoN3.jpg',
+  '/mercadoNuevo/mercadoN4.jpg'
+];
 
 function Header() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
