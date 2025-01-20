@@ -7,6 +7,7 @@ import '../styles/Header.css';
 import LogoPrincipal from '../assets/imagenes/Logos/LogoPrincipal.png'; // Ruta del logo
 import PiePagina from '../components/PiePagina';
 import logoAyuC from '../assets/imagenes/Logos/logoAyuC.png';
+import Header from '../components/Header';  // Importamos el componente Header
 
 import video1 from '../assets/videos/mercadoProvisional/1.mov';
 import video2 from '../assets/videos/mercadoProvisional/2.mov';
@@ -73,27 +74,7 @@ function MercadoSantJoan() {
   return (
     <>
        {/* Header */}
-      <header className="header">
-      <nav className="navbar">
-  <div className="navbar-background"></div> 
-  <div className="logo-container">
-    <a href="/" className="logo">
-      <img src={LogoPrincipal} alt="Logo Principal" className="logo-image" />
-    </a>
-    <a href="" className="logo">
-      <img src={logoAyuC} alt="logoAyuC" className="logo-image" />
-    </a>
-  </div>
-          <ul className="nav-links">
-          {/* <li><a href="/">Home</a></li> */}
-            <li><a href="/mercado-nuevo">Mercado nuevo</a></li>
-            <li><a href="/mercado-antiguo">Mercado antiguo</a></li>
-            <li><a href="#contact">Contacto</a></li>
-          </ul>
-          {/* <a href="#booking" className="cta-button">Posible botón delivery</a> */}
-        </nav>
-      </header>
-
+       <Header /> {/* Aquí renderizamos el Header */}
       <div style={{ textAlign: 'center', marginBottom: '30px' }}>
           <h2 style={{ fontSize: '2.5em', fontWeight: 'bold' }}>Nuestro nuevo mercado</h2>
           <p style={{ fontSize: '1.2em', color: '#555' }}>
