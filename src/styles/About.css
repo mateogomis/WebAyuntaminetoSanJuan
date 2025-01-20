@@ -61,7 +61,6 @@
   flex: 1.5;
   max-width: 520px; /* Máximo ancho de la imagen */
   text-align: center; /* Centra la imagen dentro de su contenedor */
-
 }
 
 .about-image {
@@ -70,7 +69,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding-left: 50px;
   padding-bottom: 80px;
-  
 }
 
 .about-image:hover {
@@ -127,11 +125,111 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .about h2 {
+    font-size: 36px;
+    text-align: center; /* Centrar el título */
+    margin-bottom: 20px; /* Espacio debajo del título para evitar solapamiento */
+  }
+
   .about-content {
     flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto */
+  }
+
+  .about-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-image-container {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .about-image {
+    padding-left: 0;
+    padding-bottom: 40px;
+  }
+
+  .about-stats {
+    flex-direction: column;
+    align-items: center; /* Centrar las estadísticas */
+    gap: 20px;
   }
 
   .stat-item {
     width: 100%;
+    max-width: 280px; /* Limita el ancho de los botones para que no ocupen todo el espacio */
+  }
+}
+
+/* Para móviles pequeños (máx. 480px) */
+@media (max-width: 480px) {
+  .about {
+    padding: 50px 15px;
+  }
+
+  .about h2 {
+    font-size: 32px;
+    text-align: center; /* Centrar el título */
+    margin-bottom: 25px; /* Mayor separación en pantallas pequeñas */
+  }
+
+  .about-description {
+    font-size: 16px;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-image-container {
+    max-width: 90%;
+  }
+
+  .about-stats {
+    flex-direction: column;
+    align-items: center; /* Centrar en pantallas pequeñas */
+    gap: 15px;
+  }
+
+  .stat-item {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* Para pantallas muy pequeñas (máx. 320px) */
+@media (max-width: 320px) {
+  .about {
+    padding: 40px 10px;
+  }
+
+  .about h2 {
+    font-size: 28px;
+    text-align: center; /* Centrar el título */
+    margin-bottom: 30px; /* Asegura más separación en pantallas muy pequeñas */
+  }
+
+  .about-description {
+    font-size: 14px;
+  }
+
+  .about-image-container {
+    max-width: 100%;
+  }
+
+  .about-stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stat-item {
+    max-width: 100%;
   }
 }

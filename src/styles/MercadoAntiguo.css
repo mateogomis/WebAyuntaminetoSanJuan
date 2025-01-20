@@ -1,97 +1,141 @@
 /* Fondo general */
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
-    background: linear-gradient(120deg, #f8f9fa, #ffffff);
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Centrado de carruseles directamente en la página */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+  background: linear-gradient(120deg, #f8f9fa, #ffffff);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Centrado de carruseles directamente en la página */
+.carousel {
+  margin: 30px auto; /* Centra automáticamente */
+  width: 90%; /* Asegura que se ajuste al ancho de la pantalla */
+  max-width: 1200px; /* Limita el ancho máximo */
+  overflow: visible;
+}
+
+/* Elementos del carrusel */
+.carousel-item {
+  transform: scale(0.8);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-center .carousel-item {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Estilos de las imágenes/videos del carrusel */
+.carousel-media {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: auto; /* Ajusta la altura automáticamente */
+  max-width: 400px; /* Limita el ancho máximo */
+  max-height: 300px; /* Limita la altura máxima */
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover; /* Asegura que las imágenes/videos se adapten correctamente */
+}
+
+/* Videos e imágenes verticales forzados a horizontal */
+.carousel-media {
+  aspect-ratio: 16 / 9; /* Fuerza el formato horizontal */
+}
+
+/* Flechas personalizadas */
+.slick-prev:before, .slick-next:before {
+  color: #444;
+  font-size: 2rem;
+}
+
+.slick-prev {
+  left: -50px;
+  z-index: 2;
+}
+
+.slick-next {
+  right: -50px;
+  z-index: 2;
+}
+
+/* Indicadores personalizados */
+.slick-dots {
+  bottom: -25px;
+}
+
+.slick-dots li button:before {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
   .carousel {
-    margin: 30px auto; /* Centra automáticamente */
-    width: 90%; /* Asegura que se ajuste al ancho de la pantalla */
-    max-width: 1200px; /* Limita el ancho máximo */
-    overflow: visible;
+      width: 95%; /* Ajusta el ancho para tablets */
   }
-  
-  /* Elementos del carrusel */
-  .carousel-item {
-    transform: scale(0.8);
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    opacity: 0.6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .slick-center .carousel-item {
-    transform: scale(1);
-    opacity: 1;
-  }
-  
-  .carousel-media {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    height: auto; /* Ajusta la altura automáticamente */
-    max-width: 400px; /* Limita el ancho máximo */
-    max-height: 300px; /* Limita la altura máxima */
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    object-fit: cover; /* Asegura que las imágenes/videos se adapten correctamente */
-  }
-  
-  /* Videos e imágenes verticales forzados a horizontal */
-  .carousel-media {
-    aspect-ratio: 16 / 9; /* Fuerza el formato horizontal */
-  }
-  
-  /* Flechas personalizadas */
-  .slick-prev:before, .slick-next:before {
-    color: #444;
-    font-size: 2rem;
-  }
-  
-  .slick-prev {
-    left: -50px;
-    z-index: 2;
-  }
-  
-  .slick-next {
-    right: -50px;
-    z-index: 2;
-  }
-  
-  /* Indicadores personalizados */
-  .slick-dots {
-    bottom: -25px;
-  }
-  
-  .slick-dots li button:before {
-    color: #aaa;
-    font-size: 0.9rem;
-  }
-  
-  .slick-dots li.slick-active button:before {
-    color: #444;
-    font-size: 1rem;
-  }
-  
-  /* Responsividad */
-  @media (max-width: 768px) {
-    .carousel {
+}
+
+@media (max-width: 768px) {
+  .carousel {
       width: 95%; /* Ajusta el ancho en pantallas pequeñas */
-    }
-  
-    .carousel-media {
-      max-height: 200px; /* Reduce la altura de los elementos multimedia */
-    }
-  
-    .slick-prev {
-      left: -20px;
-    }
-  
-    .slick-next {
-      right: -20px;
-    }
+      margin: 0 auto; /* Centra completamente el carrusel */
+      text-align: center; /* Asegura la alineación del contenido */
   }
-  
+
+  .carousel-media {
+      max-height: 200px; /* Reduce la altura de los elementos multimedia */
+      margin: 0 auto; /* Centra la imagen o video dentro del carrusel */
+  }
+
+  .slick-prev {
+      left: -20px;
+  }
+
+  .slick-next {
+      right: -20px;
+  }
+}
+
+/* Para móviles pequeños */
+@media (max-width: 480px) {
+  .carousel {
+      width: 100%; /* Usa todo el ancho disponible */
+      text-align: center;
+      margin: 0 auto; /* Centrar el carrusel */
+  }
+
+  .carousel-media {
+      max-width: 100%; /* Permite que las imágenes ocupen más espacio */
+      max-height: 180px; /* Ajusta la altura en móviles pequeños */
+  }
+
+  .slick-prev, .slick-next {
+      display: none; /* Oculta flechas para mejorar la experiencia en móviles */
+  }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 320px) {
+  .carousel {
+      width: 100%; /* Asegurar el ancho completo */
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  .carousel-media {
+      max-height: 150px; /* Reduce aún más la altura para pantallas muy pequeñas */
+  }
+
+  .slick-dots {
+      bottom: -15px; /* Ajusta la posición de los indicadores */
+  }
+}

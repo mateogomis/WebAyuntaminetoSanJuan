@@ -109,7 +109,7 @@ function MercadoSantJoan() {
          <nav className="navbar">
   <div className="navbar-background"></div> 
   <div className="logo-container">
-    <a href="#home" className="logo">
+    <a href="/" className="logo">
       <img src={LogoPrincipal} alt="Logo Principal" className="logo-image" />
     </a>
     <a href="" className="logo">

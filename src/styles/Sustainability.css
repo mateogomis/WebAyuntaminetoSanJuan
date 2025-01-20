@@ -1,53 +1,97 @@
-
 .text-container {
-  display: flex;        /* Establece el contenedor como un contenedor flex */
-  flex-direction: column; /* Apila los hijos verticalmente */
-  justify-content: center; /* Centra los elementos verticalmente */
+  display: flex;        
+  flex-direction: column; 
+  justify-content: center; 
   align-items: center;
   flex: 1;
   max-width: 900px;
   font-family: 'Montserrat';
   text-align: left;
   background: linear-gradient(rgba(164, 164, 164, 0.705), rgba(164, 164, 164, 0.705)), url('../assets/imagenes/Sostenibilidad.jpg');
-  background-size: cover;        /* Cubre completamente el fondo */
-  background-position: center;   /* Centra la imagen en el fondo */
-  border-radius: 15px;           /* Bordes redondeados */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);  /* Sombra para dar profundidad */
-  padding: 30px;                 /* Espacio interior para el texto */
-  color: #ffffff;                /* Color del texto para contraste */
-  position: relative;            /* Para posicionamiento potencial de elementos internos */
+  background-size: cover;       
+  background-position: center;  
+  border-radius: 15px;         
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);  
+  padding: 30px;                
+  color: #ffffff;                
+  position: relative;            
   margin-bottom: 80px;
   margin-top: 80px;
-  margin-left: 140px;
+  margin-left: 140px; /* Se cambiará en pantallas pequeñas */
 }
 
-.text-container h2{
+.text-container h2 {
   font-size: 30px;
 }
 
 .text-container p {
   font-size: 18px;
   line-height: 1.8;
-  margin-bottom: 15px;           /* Margen entre párrafos */
+  margin-bottom: 15px;           
 }
 
 .text-container strong {
   font-weight: bold;
 }
 
+/* Responsive para tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .text-container {
+    max-width: 80%;
+    margin-left: auto; /* Centra horizontalmente */
+    margin-right: auto;
+  }
+}
+
+/* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {
   .text-container {
     max-width: 90%;  /* Más ancho en pantallas pequeñas para mejor lectura */
+    margin: 0 auto;  /* Centra completamente el contenedor */
+    text-align: center; /* Centra el texto */
   }
-}
 
-@media (max-width: 480px) {
   .text-container h2 {
-    font-size: 28px;  /* Tamaño más pequeño para el título en dispositivos muy pequeños */
+    font-size: 28px;
   }
 
   .text-container p {
-    font-size: 16px;  /* Tamaño de fuente reducido para el texto */
+    font-size: 17px;
   }
 }
 
+/* Responsive para móviles pequeños */
+@media (max-width: 480px) {
+  .text-container {
+    max-width: 95%;
+    padding: 20px; /* Reducir el padding para móviles */
+    margin: 0 auto;  /* Centrado horizontal */
+    text-align: center; /* Asegurar que el texto esté centrado */
+  }
+
+  .text-container h2 {
+    font-size: 24px;
+  }
+
+  .text-container p {
+    font-size: 16px;
+  }
+}
+
+/* Responsive para móviles muy pequeños */
+@media (max-width: 320px) {
+  .text-container {
+    max-width: 100%;
+    padding: 15px; /* Espaciado reducido */
+    margin: 0 auto; 
+    text-align: center;
+  }
+
+  .text-container h2 {
+    font-size: 22px;
+  }
+
+  .text-container p {
+    font-size: 14px;
+  }
+}

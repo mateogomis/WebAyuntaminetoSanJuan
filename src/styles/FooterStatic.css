@@ -32,4 +32,66 @@
     color: #58a6ff;
     font-size: 16px;
   }
-  
+  /* Estilos responsive para el footer fijo */
+@media (max-width: 1024px) {
+  .footer-static {
+    padding: 15px 0; /* Aumentar el padding en pantallas más grandes */
+  }
+
+  .footer-icons {
+    gap: 15px; /* Reducir el espacio entre elementos */
+  }
+
+  .footer-icons li {
+    font-size: 12px; /* Reducir el tamaño del texto */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-static {
+    padding: 12px 0; /* Ajuste del padding */
+  }
+
+  .footer-icons {
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples líneas */
+    gap: 15px;
+  }
+
+  .footer-icons li {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-static {
+    padding: 8px 0;
+  }
+
+  .footer-icons {
+    flex-direction: column; /* Apilar los elementos en dispositivos pequeños */
+    gap: 10px;
+  }
+
+  .footer-icons li {
+    font-size: 12px;
+    justify-content: center;
+  }
+
+  .footer-icons li::before {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer-static {
+    padding: 6px 0;
+  }
+
+  .footer-icons li {
+    font-size: 10px; /* Reducir el tamaño del texto aún más para pantallas muy pequeñas */
+  }
+
+  .footer-icons li::before {
+    font-size: 12px;
+  }
+}

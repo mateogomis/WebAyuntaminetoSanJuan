@@ -171,6 +171,76 @@
   animation: fadeIn 3s ease-in-out;
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Apila los elementos del navbar */
+    align-items: center; /* Centra los elementos */
+    padding: 10px 15px;
+  }
+
+  .logo-container {
+    flex-direction: column; /* Apila los logos en pantallas pequeñas */
+    align-items: center;
+    gap: 20px; /* Espacio entre los logos */
+    margin-bottom: 20px; /* Espacio antes del menú */
+  }
+
+  .navbar .nav-links {
+    display: flex;
+    flex-direction: column; /* Apilar enlaces de navegación */
+    align-items: center; /* Centrar la lista */
+    gap: 15px;
+    padding: 0;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    text-align: center; /* Asegurar la alineación centrada */
+  }
+
+  .navbar .nav-links a {
+    font-size: 18px; /* Tamaño más accesible en pantallas pequeñas */
+    display: block; /* Asegura que los enlaces ocupen toda la línea */
+  }
+}
+
+/* Para móviles pequeños (máx. 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column; /* Asegura que estén en columna */
+    align-items: center; /* Centra la lista de enlaces */
+    width: 100%;
+  }
+
+  .navbar .nav-links a {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+}
+
+/* Para pantallas muy pequeñas (máx. 320px) */
+@media (max-width: 320px) {
+  .navbar {
+    padding: 5px;
+  }
+
+  .navbar .nav-links {
+    gap: 10px;
+  }
+
+  .navbar .nav-links a {
+    font-size: 14px;
+  }
+}
+
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -200,5 +270,89 @@
   .cta-button {
     font-size: 12px;
     padding: 8px 15px;
+  }
+}
+/* Estilos responsive adicionales */
+@media (max-width: 1024px) {
+  .logo-container {
+    gap: 30px; /* Reducir la separación entre logos */
+  }
+  .navbar {
+    padding: 15px 20px; /* Ajustar el padding de la barra de navegación */
+  }
+  .navbar .nav-links {
+    gap: 25px; /* Reducir el espacio entre enlaces */
+  }
+  .hero-title {
+    font-size: 60px; /* Tamaño más pequeño del título */
+  }
+  .hero-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Apila los elementos del navbar */
+    padding: 10px 15px;
+  }
+  .logo-container {
+    gap: 20px;
+    flex-direction: column; /* Apila los logos en pantallas pequeñas */
+  }
+  .navbar .nav-links {
+    flex-direction: column; /* Apilar enlaces de navegación */
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+  }
+  .hero-title {
+    font-size: 50px;
+  }
+  .hero-subtitle {
+    font-size: 18px;
+    padding: 8px 15px;
+  }
+  .cta-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+  .logo-container {
+    gap: 10px;
+  }
+  .navbar .nav-links a {
+    font-size: 14px;
+  }
+  .hero-title {
+    font-size: 40px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  .cta-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: 30px;
+  }
+  .hero-subtitle {
+    font-size: 14px;
+  }
+  .cta-button {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+  .navbar .nav-links {
+    gap: 10px;
   }
 }
