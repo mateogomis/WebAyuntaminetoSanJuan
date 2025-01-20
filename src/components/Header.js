@@ -25,23 +25,23 @@ function Header() {
       className="header"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
-      <nav className="navbar">
-        <div className="navbar-background"></div> {/* Fondo translúcido detrás del navbar */}
-        <a href="#home" className="logo">
-          <img src={LogoPrincipal} alt="Logo Principal" className="logo-image"  href="#home" />
-        </a>
-        <a href="" className="logo">
-          <img src={logoAyuC} alt="logoAyuC" className="logo-image"  href="" />
-        </a>
-        <ul className="nav-links">
-          {/* <li><a href="#home">Home</a></li> */}
-          <li><a href="#about">Historia</a></li>
-          <li><a href="#services">Puestos</a></li>
-          <li><a href="#sustainability">Sostenibilidad</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-        {/* <a href="#booking" className="cta-button">Posible botón delivery</a> */}
-      </nav>
+     <nav className="navbar">
+  <div className="navbar-background"></div> 
+  <div className="logo-container">
+    <a href="#home" className="logo">
+      <img src={LogoPrincipal} alt="Logo Principal" className="logo-image" />
+    </a>
+    <a href="" className="logo">
+      <img src={logoAyuC} alt="logoAyuC" className="logo-image" />
+    </a>
+  </div>
+  <ul className="nav-links">
+    <li><a href="#about">Historia</a></li>
+    <li><a href="#services">Puestos</a></li>
+    <li><a href="#sustainability">Sostenibilidad</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ul>
+</nav>
       <div className="hero">
         <h1 className="hero-title"></h1>
         {/* <p className="hero-subtitle">Mercat Sant Joan</p> */}

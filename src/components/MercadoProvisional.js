@@ -6,6 +6,7 @@ import '../styles/MercadoAntiguo.css';
 import '../styles/Header.css';
 import LogoPrincipal from '../assets/imagenes/Logos/LogoPrincipal.png'; // Ruta del logo
 import PiePagina from '../components/PiePagina';
+import logoAyuC from '../assets/imagenes/Logos/logoAyuC.png';
 
 import video1 from '../assets/videos/mercadoProvisional/1.mov';
 import video2 from '../assets/videos/mercadoProvisional/2.mov';
@@ -73,11 +74,16 @@ function MercadoSantJoan() {
     <>
        {/* Header */}
       <header className="header">
-        <nav className="navbar">
-          <div className="navbar-background"></div>
-          <a href="/" className="logo">
-            <img src={LogoPrincipal} alt="Logo Principal" className="logo-image" />
-          </a>
+      <nav className="navbar">
+  <div className="navbar-background"></div> 
+  <div className="logo-container">
+    <a href="#home" className="logo">
+      <img src={LogoPrincipal} alt="Logo Principal" className="logo-image" />
+    </a>
+    <a href="" className="logo">
+      <img src={logoAyuC} alt="logoAyuC" className="logo-image" />
+    </a>
+  </div>
           <ul className="nav-links">
           {/* <li><a href="/">Home</a></li> */}
             <li><a href="/mercado-nuevo">Mercado nuevo</a></li>

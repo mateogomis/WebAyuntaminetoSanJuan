@@ -28,6 +28,12 @@
   z-index: -1;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 50px; /* Ajusta la separación entre los logos */
+}
+
 .logo img {
   max-height: 65px; /* Ajusta la altura máxima del logo */
   width: auto; /* Mantiene la proporción del logo */
