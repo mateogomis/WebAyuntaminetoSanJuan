@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Header.css';
-import LogoPrincipal from '../assets/imagenes/Logos/LogoPrincipal.png'; // Ruta del logo
+import LogoPrincipal from '../assets/imagenes/Logos/LogoPrincipal.png'; 
 import logoAyuC from '../assets/imagenes/Logos/logoAyuC.png';
 
-function Header() {
-  const images = [
-    '../assets/imagenes/mercadoAntiguo/mercadoA1.jpg',
-    '../assets/imagenes/mercadoAntiguo/mercadoA2.jpg',
-    '../assets/imagenes/mercadoAntiguo/mercadoA3.jpg',
-  ];
+// Importación de imágenes correctamente
+import mercadoN1 from '../assets/imagenes/mercadoNuevo/mercadoN1.jpg';
+import mercadoN2 from '../assets/imagenes/mercadoNuevo/mercadoN2.jpg';
+import mercadoN3 from '../assets/imagenes/mercadoNuevo/mercadoN3.jpg';
+import mercadoN4 from '../assets/imagenes/mercadoNuevo/mercadoN4.jpg';
 
+const images = [mercadoN1, mercadoN2, mercadoN3, mercadoN4];
+
+function Header() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Cambia la imagen cada 5 segundos
+    }, 5000);
 
-    return () => clearInterval(interval); // Limpia el intervalo al desmontar
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -25,26 +27,25 @@ function Header() {
       className="header"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
-     <nav className="navbar">
-  <div className="navbar-background"></div> 
-  <div className="logo-container">
-    <a href="#home" className="logo">
-      <img src={LogoPrincipal} alt="Logo Principal" className="logo-image" />
-    </a>
-    <a href="" className="logo">
-      <img src={logoAyuC} alt="logoAyuC" className="logo-image" />
-    </a>
-  </div>
-  <ul className="nav-links">
-    <li><a href="#about">Historia</a></li>
-    <li><a href="#services">Puestos</a></li>
-    <li><a href="#sustainability">Sostenibilidad</a></li>
-    <li><a href="#contact">Contacto</a></li>
-  </ul>
-</nav>
+      <nav className="navbar">
+        <div className="navbar-background"></div>
+        <div className="logo-container">
+          <a href="#home" className="logo">
+            <img src={LogoPrincipal} alt="Logo Principal" className="logo-image" />
+          </a>
+          <a href="#home" className="logo">
+            <img src={logoAyuC} alt="logoAyuC" className="logo-image" />
+          </a>
+        </div>
+        <ul className="nav-links">
+          <li><a href="#about">Historia</a></li>
+          <li><a href="#services">Puestos</a></li>
+          <li><a href="#sustainability">Sostenibilidad</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
       <div className="hero">
-        <h1 className="hero-title"></h1>
-        {/* <p className="hero-subtitle">Mercat Sant Joan</p> */}
+        {/* <h1 className="hero-title">Mercado Sant Joan</h1> */}
       </div>
     </header>
   );
