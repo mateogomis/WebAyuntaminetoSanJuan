@@ -7,6 +7,14 @@ import '../styles/Header.css';
 import PiePagina from '../components/PiePagina';
 import Header from '../components/Header';  // Importamos el componente Header
 
+// Imágenes
+import mercadoN1 from '../assets/imagenes/mercadoNuevo/mercadoN1.jpg';
+import mercadoN2 from '../assets/imagenes/mercadoNuevo/mercadoN2.jpg';
+import mercadoN3 from '../assets/imagenes/mercadoNuevo/mercadoN3.jpg';
+import mercadonoN4 from '../assets/imagenes/mercadoNuevo/mercadonoN4.jpg';
+import mercadoN5 from '../assets/imagenes/mercadoNuevo/mercadoN5.jpg';
+import mercadoN6 from '../assets/imagenes/mercadoNuevo/mercadoN6.jpg';
+import mercadoN7 from '../assets/imagenes/mercadoNuevo/mercadoN7.jpg';
 
 // Videos
 import video1 from '../assets/videos/mercadoNuevo/1.mov';
@@ -31,33 +39,55 @@ import video19 from '../assets/videos/mercadoNuevo/19.mov';
 import video20 from '../assets/videos/mercadoNuevo/20.mov';
 import video21 from '../assets/videos/mercadoNuevo/21.mov';
 import video22 from '../assets/videos/mercadoNuevo/22.mov';
-
-const videos = [
-  video1, video2, video3, video4, video5, video6, video7, video8, video9, video10,
-  video11, video12, video13, video14, video15, video16, video17, video18, video19,
-  video20, video21, video22
-];
-
-const carouselSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  centerMode: true,
-  centerPadding: "0px",
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        centerMode: true,
-      },
-    },
-  ],
-};
+import video23 from '../assets/videos/mercadoNuevo/23.mov';
+import video24 from '../assets/videos/mercadoNuevo/24.mov';
+import video25 from '../assets/videos/mercadoNuevo/25.mov';
+import video26 from '../assets/videos/mercadoNuevo/26.mov';
+import video27 from '../assets/videos/mercadoNuevo/27.mov';
+import video28 from '../assets/videos/mercadoNuevo/28.mov';
+import video29 from '../assets/videos/mercadoNuevo/29.mov';
+import video30 from '../assets/videos/mercadoNuevo/30.mov';
+import video31 from '../assets/videos/mercadoNuevo/31.mov';
+import video32 from '../assets/videos/mercadoNuevo/32.mov';
+import video33 from '../assets/videos/mercadoNuevo/33.mov';
 
 function MercadoSantJoan() {
+  const images = [
+    mercadoN1,
+    mercadoN2,
+    mercadoN3,
+    mercadonoN4,
+    mercadoN5,
+    mercadoN6,
+    mercadoN7,
+  ];
+
+  const videos = [
+    video1, video2, video3, video4, video5, video6, video7, video8, video9, video10,
+    video11, video12, video13, video14, video15, video16, video17, video18, video19,
+    video20, video21, video22, video23, video24, video25,
+    video26, video27, video28, video29, video30, video31, video32, video33
+  ];
+
+  const carouselSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "0px",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Header /> {/* Aquí renderizamos el Header */}
@@ -68,6 +98,17 @@ function MercadoSantJoan() {
           Explora la evolución del mercado con videos exclusivos que destacan su diseño, construcción y ambiente.
         </p>
       </div>
+
+      {/* Carrusel de imágenes */}
+      <section id="carousel-images">
+        <Slider {...carouselSettings} className="carousel">
+          {images.map((image, index) => (
+            <div key={index} className="carousel-item">
+              <img src={image} alt={`Imagen ${index + 1}`} className="carousel-media" />
+            </div>
+          ))}
+        </Slider>
+      </section>
 
       {/* Carrusel de videos */}
       <section id="carousel-videos">
@@ -89,9 +130,9 @@ function MercadoSantJoan() {
             ¿Por qué visitar el Mercado Sant Joan?
           </h3>
           <p style={{ fontSize: '1.1em', lineHeight: '1.6', color: '#666', marginBottom: '30px' }}>
-            El Mercado Sant Joan no solo es un espacio de compras, sino también un centro cultural y social.
-            Su diseño sostenible, accesibilidad y ambiente vibrante lo convierten en un lugar único para
-            explorar, disfrutar y aprender sobre la comunidad local.
+          El proyecto de modernización y ampliación del Mercado Municipal de Sant Joan, nace con el objetivo de crear un espacio más atractivo y funcional para todos. 
+          El nuevo mercado contará con un sistema de calefacción y aire acondicionado más eficiente, así como la implementación de tecnologías digitales para mejorar la experiencia de compra. 
+          Este proyecto, busca no solo mejorar las instalaciones actuales, sino también atraer a los compradores más jóvenes.
           </p>
         </div>
       </section>

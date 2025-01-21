@@ -93,7 +93,7 @@ function MercadoSantJoan() {
       <Header /> {/* Aquí renderizamos el Header */}
       
       <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-        <h2 style={{ fontSize: '2.5em', fontWeight: 'bold' }}>Nuestro nuevo mercado</h2>
+        <h2 style={{ fontSize: '2.5em', fontWeight: 'bold' }}>Nuestra historia</h2>
         <p style={{ fontSize: '1.2em', color: '#555' }}>
           Explora la evolución del mercado con videos exclusivos que destacan su diseño, construcción y ambiente.
         </p>
@@ -130,9 +130,9 @@ function MercadoSantJoan() {
             ¿Por qué visitar el Mercado Sant Joan?
           </h3>
           <p style={{ fontSize: '1.1em', lineHeight: '1.6', color: '#666', marginBottom: '30px' }}>
-            El Mercado Sant Joan no solo es un espacio de compras, sino también un centro cultural y social.
-            Su diseño sostenible, accesibilidad y ambiente vibrante lo convierten en un lugar único para
-            explorar, disfrutar y aprender sobre la comunidad local.
+          El origen del Mercado Municipal de Sant Joan d’Alacant se remonta a principios del siglo XX, en un periodo en el que la necesidad de un espacio dedicado al intercambio de productos frescos y de primera necesidad se hizo evidente en Sant Joan d’Alacant. 
+          Antes de la construcción del mercado, las transacciones comerciales se realizaban en la calle, en pequeños puestos y ferias. 
+          Por lo que la construcción del mercado permitió centralizar y organizar este comercio, proporcionando a los habitantes un lugar fijo y cubierto para realizar sus compras.  
           </p>
         </div>
       </section>

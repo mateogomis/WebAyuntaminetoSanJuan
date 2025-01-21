@@ -111,9 +111,15 @@ function MercadoSantJoan() {
             ¿Por qué visitar el Mercado Sant Joan?
           </h3>
           <p style={{ fontSize: '1.1em', lineHeight: '1.6', color: '#666', marginBottom: '30px' }}>
-            El Mercado Sant Joan no solo es un espacio de compras, sino también un centro cultural y social.
-            Su diseño sostenible, accesibilidad y ambiente vibrante lo convierten en un lugar único para
-            explorar, disfrutar y aprender sobre la comunidad local.
+          Debido a las obras de renovación del Mercado Municipal, el mercado provisional se ha trasladado a la Plaza de la Ordana. 
+          Durante este periodo, continuaremos ofreciendo todos nuestros productos y servicios habituales en este nuevo espacio, 
+          asegurando la misma calidad y atención de siempre. 
+          <br></br>
+
+Este cambio es temporal y forma parte de nuestro compromiso para crear un mercado más moderno y funcional. 
+
+
+
           </p>
          
         </div>
