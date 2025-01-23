@@ -122,6 +122,51 @@
 .stat-item:hover p {
   color: #4b5563;
 }
+.about-banner {
+  display: flex;
+  justify-content: center;
+  gap: 100px; /* Espaciado más pequeño entre imágenes */
+  margin-bottom: 20px; /* Reduce el margen inferior */
+  max-width: 80%; /* Limita el ancho total del banner */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-image {
+  width: 25%;  /* Tamaño predeterminado para todas las imágenes */
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+.banner-image:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo especial para la imagen de Fondos Europeos */
+.banner-image.fondos-europeos {
+  width: 45%;  /* Hacer esta imagen más grande que las otras */
+  height: 45%;
+  margin-left: 5%; /* Ajuste de margen para centrar mejor */
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .about-banner {
+    flex-direction: column; /* Cambia a formato vertical en móviles */
+    max-width: 100%;
+  }
+
+  .banner-image {
+    width: 80%; /* Asegura que ocupen un ancho mayor en pantallas pequeñas */
+    margin: 0 auto; /* Centra las imágenes */
+  }
+
+  .banner-image.fondos-europeos {
+    width: 90%;  /* Ajuste para móviles, haciéndola más prominente */
+  }
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
